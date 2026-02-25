@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#7B2FFF" />
+
+    <!-- Primary SEO -->
+    <title>Quiz Buzz 🐝 - Free Quiz Games & Brain Teasers</title>
+    <meta name="description" content="Play free quiz games, mini-games, kids games and arcade games. Challenge friends, earn XP and climb the leaderboard on Quiz Buzz!" />
+    <meta name="keywords" content="quiz game, free quiz, brain games, trivia, kids games, arcade games, word games, math games, puzzle games, multiplayer quiz" />
+    <meta name="author" content="Quiz Buzz" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (WhatsApp, Facebook, Telegram) -->
+    <meta property="og:title" content="Quiz Buzz 🐝 - Free Quiz & Brain Games" />
+    <meta property="og:description" content="Play free quiz games, mini-games and arcade games! Challenge friends and climb the leaderboard." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://quizbuzz.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Quiz Buzz" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Quiz Buzz 🐝 - Free Quiz & Brain Games" />
+    <meta name="twitter:description" content="Play free quiz games, mini-games and arcade games! Challenge friends and climb the leaderboard." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- PWA -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Quiz Buzz" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data — Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Quiz Buzz",
+      "url": "https://quizbuzz.app",
+      "description": "Free quiz games, mini-games, kids games and arcade games",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://quizbuzz.app/quiz?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data — Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Quiz Buzz",
+      "url": "https://quizbuzz.app",
+      "logo": "https://quizbuzz.app/logo512.png",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Performance: DNS prefetch -->
+    <link rel="dns-prefetch" href="//firebase.googleapis.com" />
+    <link rel="dns-prefetch" href="//www.freetogame.com" />
+
+    <style>
+      /* Critical CSS — prevent flash */
+      body {
+        margin: 0;
+        background: #0D0D1A;
+        color: #ffffff;
+        font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      #root { min-height: 100vh; }
+      /* Loading spinner */
+      .app-loading {
+        display: flex; align-items: center;
+        justify-content: center; min-height: 100vh;
+        font-size: 3rem;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="text-align:center;padding:40px;font-family:sans-serif;">
+        <h1>🐝 Quiz Buzz</h1>
+        <p>Please enable JavaScript to play Quiz Buzz!</p>
+      </div>
+    </noscript>
+    <div id="root"><div class="app-loading">🐝</div></div>
+
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(reg) {
+              console.log('SW registered:', reg.scope);
+            }).catch(function(err) {
+              console.log('SW failed:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

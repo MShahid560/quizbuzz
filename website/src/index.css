@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --yellow: #FFD60A;
+  --orange: #FF6B35;
+  --pink: #FF3D9A;
+  --purple: #7B2FFF;
+  --blue: #00B4FF;
+  --green: #06D6A0;
+  --red: #FF4757;
+  --dark: #0D0D1A;
+  --card: #16213E;
+  --card2: #1A2744;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--dark);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.app { min-height: 100vh; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 50px; }

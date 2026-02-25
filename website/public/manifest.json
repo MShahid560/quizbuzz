@@ -1,0 +1,60 @@
+{
+  "short_name": "Quiz Buzz",
+  "name": "Quiz Buzz 🐝 - Play & Learn",
+  "description": "Free quiz games, mini-games, arcade and kids games. Challenge friends and climb the leaderboard!",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#7B2FFF",
+  "background_color": "#0D0D1A",
+  "orientation": "portrait-primary",
+  "categories": ["games", "education", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "Play Quiz",
+      "short_name": "Quiz",
+      "description": "Start a quick quiz",
+      "url": "/quiz",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Daily Challenge",
+      "short_name": "Daily",
+      "description": "Today's daily challenge",
+      "url": "/daily",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Games",
+      "short_name": "Games",
+      "description": "Play mini-games",
+      "url": "/games",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ]
+}
